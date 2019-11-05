@@ -3,3 +3,18 @@ This is a Libra Wallet web demo app with popular items.(list accounts, transacti
 
 ## Facebook 
 Currently, FB doesn't provide full API to implement web-wallet, thus we used Libra CLI running on server + service to map client requests to CLI commands.
+
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
