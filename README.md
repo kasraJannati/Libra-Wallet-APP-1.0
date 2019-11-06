@@ -18,4 +18,3 @@ npm run serve
 ```
 npm run build
 ```
-not cool
