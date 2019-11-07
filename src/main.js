@@ -2,3 +2,13 @@
 require('framework7/css/framework7.md.min.css')
 //require('framework7/css/framework7.ios.min.css')
 require('./assets/app.css')
+
+
+import Vue from 'vue';
+import AsyncComputed from 'vue-async-computed';
+import VueLodash     from 'vue-lodash';
+import Framework7    from 'framework7/framework7.esm.bundle';
+import Framework7Vue from 'framework7-vue';
+import App           from '@/app.vue';
+import AppDirectives from '@/app-directives.js';
+import AppFilters    from '@/app-filters.js';
