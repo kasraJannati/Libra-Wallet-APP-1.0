@@ -15,3 +15,5 @@ import AppFilters    from '@/app-filters.js';
 import AppMixin      from '@/app-mixin.js';
 
 //Vue.config.productionTip = false
+
+Vue.use(AsyncComputed);
