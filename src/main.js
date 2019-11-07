@@ -35,6 +35,5 @@ window.$(document).on('deviceready', () => {
 
 
 // Trigger 'deviceready' if cordova has not been loaded (for testing on desktop)
+!window.cordova && window.$(document).trigger('deviceready');
 
-
-// Trigger 'deviceready' if cordova has not been loaded (for testing on desktop)
