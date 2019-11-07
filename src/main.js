@@ -26,3 +26,5 @@ Framework7.use(Framework7Vue);
 window.$ = Framework7.$;
 
 window.app = new Vue({
+render: h => h(App),
+}).$mount('#app')
