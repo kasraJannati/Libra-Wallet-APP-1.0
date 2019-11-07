@@ -17,3 +17,4 @@ import AppMixin      from '@/app-mixin.js';
 //Vue.config.productionTip = false
 
 Vue.use(AsyncComputed);
+Vue.use(VueLodash);
