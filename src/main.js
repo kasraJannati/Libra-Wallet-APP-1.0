@@ -28,3 +28,7 @@ window.$ = Framework7.$;
 window.app = new Vue({
 render: h => h(App),
 }).$mount('#app')
+
+window.$(document).on('deviceready', () => {
+  window.console.log('deviceready')
+});
