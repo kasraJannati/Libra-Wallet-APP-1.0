@@ -24,3 +24,5 @@ Framework7.use(Framework7Vue);
 
 // make global
 window.$ = Framework7.$;
+
+window.app = new Vue({
