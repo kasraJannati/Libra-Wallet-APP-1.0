@@ -13,3 +13,5 @@ import App           from '@/app.vue';
 import AppDirectives from '@/app-directives.js';
 import AppFilters    from '@/app-filters.js';
 import AppMixin      from '@/app-mixin.js';
+
+//Vue.config.productionTip = false
