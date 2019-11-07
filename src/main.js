@@ -12,3 +12,4 @@ import Framework7Vue from 'framework7-vue';
 import App           from '@/app.vue';
 import AppDirectives from '@/app-directives.js';
 import AppFilters    from '@/app-filters.js';
+import AppMixin      from '@/app-mixin.js';
