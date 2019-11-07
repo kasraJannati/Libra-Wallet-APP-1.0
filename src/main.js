@@ -18,3 +18,4 @@ import AppMixin      from '@/app-mixin.js';
 
 Vue.use(AsyncComputed);
 Vue.use(VueLodash);
+Vue.mixin(AppMixin);
