@@ -32,3 +32,6 @@ render: h => h(App),
 window.$(document).on('deviceready', () => {
   window.console.log('deviceready')
 });
+
+
+// Trigger 'deviceready' if cordova has not been loaded (for testing on desktop)
