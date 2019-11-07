@@ -21,3 +21,6 @@ Vue.use(VueLodash);
 Vue.mixin(AppMixin);
 
 Framework7.use(Framework7Vue);
+
+// make global
+window.$ = Framework7.$;
