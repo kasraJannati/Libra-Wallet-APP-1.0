@@ -12,3 +12,8 @@ import PageWebpayTransfer from '@/pages/page-webpay-transfer.vue';
 import PanelLeft          from '@/pages/panel-left.vue';
 import PanelRight         from '@/pages/panel-right.vue';
 */
+export default [
+  {
+    path: '/',
+    component: PageLibra,
+  },
