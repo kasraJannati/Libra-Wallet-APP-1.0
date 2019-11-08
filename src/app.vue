@@ -18,3 +18,13 @@
 <script>
   import { f7App, f7Panel, f7View, f7Popup, f7Statusbar } from 'framework7-vue';
   import routes from '@/app-routes';
+
+
+  export default {
+    components: {
+      f7App,
+      f7Panel,
+      f7View,
+      f7Popup,
+      f7Statusbar,
+    },
