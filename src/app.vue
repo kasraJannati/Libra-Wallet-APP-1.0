@@ -51,3 +51,7 @@
         const self = this;
         $(window).on('lifecycle', function (event) {
           const router = self.$f7.views.main.router;
+        
+        if (event.detail.type != 'back-button') {
+            return;
+          }
