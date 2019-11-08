@@ -33,3 +33,7 @@ export default [
     path: '/page-accounts/:txId',
     component: PageAccountsTx,
   },
+{
+    path: '/page-home',
+    component: PageHome,
+  },
