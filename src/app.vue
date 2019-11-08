@@ -55,3 +55,11 @@
         if (event.detail.type != 'back-button') {
             return;
           }
+
+          if (router.history.length > 2) {
+            router.back();
+          } else {
+            utils.closeApplication();
+          }
+        });
+      },
