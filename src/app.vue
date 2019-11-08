@@ -73,3 +73,12 @@
           console.log('WebpayHandler', payload)
           const router = self.$f7.views.main.router;
           const params = { props: { payload } };
+          
+          
+          if (payload.methodName == 'basic-card') {
+            router.navigate('/page-webpay-basic/', params);
+          } else {
+            router.navigate('/page-webpay-transfer/', params);
+          }
+        }
+
