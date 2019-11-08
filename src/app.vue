@@ -45,3 +45,9 @@
       // Subscribe to Web Payments (android only)
       //this.setWebPaymentRequestHandler();
     },
+    
+ methods: {
+      setBackButtonHandler() {
+        const self = this;
+        $(window).on('lifecycle', function (event) {
+          const router = self.$f7.views.main.router;
