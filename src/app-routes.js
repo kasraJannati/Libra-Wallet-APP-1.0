@@ -25,3 +25,7 @@ export default [
     path: '/page-todo',
     component: PageTodo,
   },
+{
+    path: '/page-accounts',
+    component: PageAccounts,
+  },
