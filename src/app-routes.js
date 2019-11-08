@@ -37,3 +37,7 @@ export default [
     path: '/page-home',
     component: PageHome,
   },
+   {
+    path: '/page-login',
+    component: PageLogin,
+  },
