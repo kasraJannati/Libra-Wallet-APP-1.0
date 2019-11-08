@@ -63,3 +63,8 @@
           }
         });
       },
+
+      // android only
+      /*
+      setWebPaymentRequestHandler() {
+        const self = this;
