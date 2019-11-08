@@ -82,3 +82,10 @@
           }
         }
 
+     $(document).on('deviceready', () =>
+          setTimeout(() => webpay.setPaymentRequestHandler(handler), 500)
+        )
+      },
+      */
+    }
+  };
