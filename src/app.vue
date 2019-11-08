@@ -28,3 +28,13 @@
       f7Popup,
       f7Statusbar,
     },
+
+    data() {
+      return {
+        f7Params: {
+          theme: 'md',
+          routes,
+          id: 'com.libra.wallet',
+        },
+      };
+    },
