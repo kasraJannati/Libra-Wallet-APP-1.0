@@ -38,3 +38,10 @@
         },
       };
     },
+
+    created() {
+      // Subscribe to 'back-button' events
+      this.setBackButtonHandler();
+      // Subscribe to Web Payments (android only)
+      //this.setWebPaymentRequestHandler();
+    },
