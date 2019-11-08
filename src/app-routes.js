@@ -17,3 +17,7 @@ export default [
     path: '/',
     component: PageLibra,
   },
+ {
+    path: '/page-libra-account/:accountId',
+    component: PageLibraAccount,
+  },
