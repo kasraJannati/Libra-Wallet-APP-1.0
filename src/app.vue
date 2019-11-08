@@ -14,3 +14,7 @@
    <f7-view url="/" :main="true" class="ios-edges"></f7-view>
   </f7-app>
 </template> 
+
+<script>
+  import { f7App, f7Panel, f7View, f7Popup, f7Statusbar } from 'framework7-vue';
+  import routes from '@/app-routes';
