@@ -68,3 +68,8 @@
       /*
       setWebPaymentRequestHandler() {
         const self = this;
+
+        const handler = (payload) => {
+          console.log('WebpayHandler', payload)
+          const router = self.$f7.views.main.router;
+          const params = { props: { payload } };
