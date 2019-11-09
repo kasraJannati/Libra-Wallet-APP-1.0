@@ -35,3 +35,15 @@ export default {
         )
       );
     },
+
+    // @return Promise<Index>
+    dialog (title = '', text = '', options = {}) {
+      return new Promise(done =>
+        this.$f7.dialog.create({
+          title  : title,
+          text   : text,
+          onClick: (dialog, index) => done(index),
+          ...options
+        }).open()
+      )
+    },
