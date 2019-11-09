@@ -68,3 +68,18 @@ export default {
         )
       );
     },
+
+    // @return Promise
+    preloader (promise, color) {
+      preloaderCounter++;
+      this.$f7.preloader.show(color);
+      return promise
+        .then(v => {
+          --preloaderCounter || this.$f7.preloader.hide();
+          return v;
+        })
+        .catch(e => {
+          --preloaderCounter || this.$f7.preloader.hide();
+          return Promise.reject(e);
+        })
+    },
