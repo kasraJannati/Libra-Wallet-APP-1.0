@@ -61,3 +61,12 @@ export default [
     path: '/page-webpay-transfer',
     component: PageWebpayTransfer,
   },
+  {
+    path: '/panel-left',
+    component: PanelLeft,
+  },
+  {
+    path: '/panel-right',
+    component: PanelRight,
+  },*/
+
