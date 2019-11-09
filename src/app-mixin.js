@@ -25,3 +25,13 @@ export default {
         this.$f7.dialog.alert(text, title, done)
       );
     },
+
+    // @return Promise
+    confirm (title = '', text = '') {
+      return new Promise(done =>
+        this.$f7.dialog.confirm(text, title,
+            () => done(true ),
+            () => done(false)
+        )
+      );
+    },
