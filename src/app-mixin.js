@@ -57,3 +57,14 @@ export default {
         )
       );
     },
+
+    // @return Promise
+    prompt (title = '', text = '', value = '') {
+      return new Promise(done =>
+        this.$f7.dialog.prompt(text, title,
+            v  => done(v),
+            () => done(false),
+            value
+        )
+      );
+    },
