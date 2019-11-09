@@ -47,3 +47,13 @@ export default {
         }).open()
       )
     },
+
+    // @return Promise
+    password (title = '', text = '') {
+      return new Promise(done =>
+        this.$f7.dialog.password(text, title,
+            v  => done(v),
+            () => done(false)
+        )
+      );
+    },
