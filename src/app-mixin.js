@@ -97,3 +97,16 @@ export default {
       )
     },
 
+
+    // @return Promise
+    error(e, options) {
+      if (e.response && e.response.data && e.response.data.message) {
+        const message = e.response.data.message;
+        this.toast(message.replace(/.*message:(.*)}.*/, '$1'), {})
+        return this.toast(e, options);
+      }
+
+      return this.toast(e, options);
+    },
+  }
+}
