@@ -15,3 +15,12 @@ Vue.filter('formatCardPan', function (value) {
   }
   return ('' + value).replace(/(\d{4})/g, '$1 ');
 })
+
+//
+Vue.filter('formatCardDate', function (value) {
+  if (value == undefined) {
+    return '';
+  }
+  if (value.length == 4) {
+    return value.replace(/(\d{2})(\d{2})/, '$2/$1')
+  }
