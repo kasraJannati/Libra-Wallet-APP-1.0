@@ -7,3 +7,11 @@ Vue.filter('formatCurrency', function (value, currency = '€') {
   }
   return 'n/a';
 })
+
+//
+Vue.filter('formatCardPan', function (value) {
+  if (!value) {
+  	return '';
+  }
+  return ('' + value).replace(/(\d{4})/g, '$1 ');
+})
