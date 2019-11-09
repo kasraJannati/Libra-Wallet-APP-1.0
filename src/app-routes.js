@@ -41,3 +41,23 @@ export default [
     path: '/page-login',
     component: PageLogin,
   },
+  {
+    path: '/page-chat',
+    component: PageChat,
+  },
+  {
+    path: '/page-expenses',
+    component: PageExpenses,
+  },
+  {
+    path: '/page-transfer',
+    component: PageTransfer,
+  },
+  {
+    path: '/page-webpay-basic',
+    component: PageWebpayBasic,
+  },
+  {
+    path: '/page-webpay-transfer',
+    component: PageWebpayTransfer,
+  },
