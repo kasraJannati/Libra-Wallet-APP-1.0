@@ -9,3 +9,13 @@ const toggle = (el, show) => {
     el.style.opacity = 0;
   }
 }
+
+/**/
+Vue.directive('fade-in', {
+  
+  update: function(el, binding) {
+    toggle(el, false);
+    setTimeout(() => toggle(el, true), 100);
+  },
+
+})
