@@ -83,3 +83,17 @@ export default {
           return Promise.reject(e);
         })
     },
+// @return Promise
+    toast(text = '', options = {}) {
+      return new Promise(done =>
+        this.$f7.toast.create({
+          text: text,
+          position: 'center',
+          destroyOnClose: true,
+          closeTimeout: 3000,
+          on: { close: done },
+          ...options
+        }).open()
+      )
+    },
+
