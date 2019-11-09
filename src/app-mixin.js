@@ -18,3 +18,10 @@ export default {
         }
       });*/
     },
+
+    // @return Promise
+    alert (title = '', text = '') {
+      return new Promise(done =>
+        this.$f7.dialog.alert(text, title, done)
+      );
+    },
