@@ -54,3 +54,5 @@
     f7Link,
     f7List, f7ListGroup, f7ListItem, f7ListButton,
   } from 'framework7-vue';
+
+  import libra from '@/libra/libra.js';
