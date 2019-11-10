@@ -44,3 +44,19 @@
         :footer="'tx/contract:' + tx.rawTxn.payload.transaction"
         @click="showTx(tx)"
       >
+
+        <span slot="after">
+          {{ tx.rawTxn.payload.args.U64 / 1000000 }}
+        </span>
+      </f7-list-item>
+    </f7-list>
+
+    <!-- Popup: Card Actions -->
+    <f7-actions ref="actionTxDetails" v-if="txDetails">
+        <f7-actions-label>
+          Transaction raw data
+        </f7-actions-label>
+        <tt style="word-wrap:break-word;">
+          {{ JSON.stringify(this.txDetails, null, 1) }}
+        </tt>
+    </f7-actions>
