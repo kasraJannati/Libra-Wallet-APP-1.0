@@ -115,3 +115,17 @@
           this.error(e);
         }
       },
+ refreshOnPull(event, done) {
+        this.refresh(false).then(done, done);
+      },
+      async accountMint() {
+        try {
+          const coins = await this.prompt('How many coins to mint?', '', 10)
+          if (coins) {
+            await this.preloader( libra.accountMint(this.accountId, coins) )
+            await this.preloader( this.refresh(false) );
+          }
+        } catch (e) {
+          this.error(e);
+        }
+      },
