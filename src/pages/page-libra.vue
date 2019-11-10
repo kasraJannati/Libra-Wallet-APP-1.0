@@ -88,3 +88,11 @@
           this.error(e);
         }
       },
+
+      async refresh(useCache) {
+        try {
+          this.accountList = await this.preloader( libra.accountList() );
+        } catch (e) {
+          this.error(e);
+        }
+      },
