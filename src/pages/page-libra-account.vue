@@ -102,3 +102,16 @@
     async mounted() {
       setTimeout(() => this.preloader( this.refresh(true) ), 100)
     },
+
+    methods: {
+      async refresh(useCache) {
+        try {
+          this.accountId = this.$f7route.params.accountId;
+          this.balance = +await libra.queryBalance(this.accountId);
+          //Vue.set(this, "balance", '' + this.balance)
+          this.txList = await libra.queryTransactions(this.accountId);
+        } catch (e) {
+          this.txList = [];
+          this.error(e);
+        }
+      },
