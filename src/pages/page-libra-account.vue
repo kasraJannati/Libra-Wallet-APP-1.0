@@ -9,3 +9,23 @@
       <f7-nav-right>
         <f7-link icon-if-md="material:send" @click="transfer()"/>
       </f7-nav-right>
+ <f7-searchbar
+        class="searchbar"
+        expandable
+        search-container="[data-name='page-libra-account'] .searchbar-list"
+        search-in=".item-title"
+      />
+    </f7-navbar>
+
+   <f7-block class="text-align-center">
+      <h1 v-fade-in>
+        &nbsp;
+        <span v-if="balance != undefined"> Total: {{ balance }} coins</span> 
+        &nbsp;
+      </h1>
+      <span>
+        &nbsp;
+        <span v-if="txList.length != 0"> num of transactions: {{ txList.length }}</span>
+        &nbsp;
+      </span>
+    </f7-block>
