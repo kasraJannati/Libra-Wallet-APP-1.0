@@ -77,3 +77,14 @@
       this.endpoint = libra.endpoint(false);
       this.preloader( this.refresh(true) );
     },
+
+    methods: {
+      async accountCreate() {
+        try {
+          const account = await this.preloader( libra.accountCreate() );
+          await this.preloader( this.refresh(false) );
+          this.alert('Account created', account.accountAddress);
+        } catch (e) {
+          this.error(e);
+        }
+      },
