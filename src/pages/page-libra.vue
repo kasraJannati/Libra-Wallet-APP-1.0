@@ -1,1 +1,45 @@
+<template>
+  <f7-page name="page-accounts" ptr @ptr:refresh="refreshOnPull">
 
+    <f7-navbar no-shadow color=white text-color="black">
+      <!--f7-nav-left>
+        <f7-link icon-f7="arrow_left" back></f7-link>
+      </f7-nav-left-->
+      <f7-nav-title> Interface to Libra CLI </f7-nav-title>
+      <f7-nav-right>
+        <f7-link icon-if-md="material:add" @click="accountCreate()"/>
+      </f7-nav-right>
+    </f7-navbar>
+
+    <f7-block class="text-align-center">
+      <h1 v-fade-in> 
+        &nbsp;
+        Libra accounts
+        &nbsp;
+      </h1>
+      {{ endpoint }}
+    </f7-block>
+     
+     <f7-list no-hairlines class="text-align-center">
+      <f7-list-button @click="accountCreate()">
+        NEW ACCOUNT
+      </f7-list-button>
+    </f7-list>
+    
+    <f7-list>
+      <f7-list-item
+        v-for="(item) in accountList"
+        :key="item.index"
+        :link="'/page-libra-account/' + item.index"
+        :title="item.address"
+        :after="'#' + item.index" 
+        >
+        <f7-icon slot="inner-start" class="padding-right"
+          color="blue"
+          md="material:account_balance_wallet"
+        />
+      </f7-list-item>    
+    </f7-list>
+
+  </f7-page>
+</template>
