@@ -35,3 +35,12 @@
         MINT COINS ...
       </f7-list-button>
     </f7-list>
+   
+   <f7-list no-hairlines class="searchbar-list">
+      <f7-list-item
+        v-for="(tx) in txList"
+        :header="'Exp.' + txExpTime(tx) + ' Seq. number: ' + tx.rawTxn.sequenceNumber"
+        :title="tx.rawTxn.payload.args.ADDRESS"
+        :footer="'tx/contract:' + tx.rawTxn.payload.transaction"
+        @click="showTx(tx)"
+      >
