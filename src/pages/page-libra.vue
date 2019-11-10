@@ -96,3 +96,10 @@
           this.error(e);
         }
       },
+
+      async refreshOnPull(event, done) {
+        this.refresh(false).then(done, done);
+      },
+    },
+  };
+</script>
