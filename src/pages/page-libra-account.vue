@@ -76,3 +76,16 @@
     f7Actions, f7ActionsGroup, f7ActionsLabel, f7ActionsButton,
   } from 'framework7-vue';
   import libra from '@/libra/libra.js';
+
+  export default {
+    components: {
+      f7Page,
+      f7Fab,
+      f7Icon,
+      f7Navbar, f7NavLeft, f7NavRight, f7NavTitle,
+      f7Block, f7BlockTitle,
+      f7Link,
+      f7List, f7ListIndex, f7ListGroup, f7ListItem, f7ListButton,
+      f7Searchbar,
+      f7Actions, f7ActionsGroup, f7ActionsLabel, f7ActionsButton,
+    },
