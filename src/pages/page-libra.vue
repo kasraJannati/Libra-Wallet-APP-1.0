@@ -66,3 +66,9 @@
       f7Link,
       f7List, f7ListGroup, f7ListItem, f7ListButton,
     },
+   data() {
+      return {
+        endpoint:'',
+        accountList: []
+      }
+    },
