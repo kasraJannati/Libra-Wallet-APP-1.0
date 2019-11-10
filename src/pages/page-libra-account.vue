@@ -89,3 +89,16 @@
       f7Searchbar,
       f7Actions, f7ActionsGroup, f7ActionsLabel, f7ActionsButton,
     },
+
+    data() {
+      return {
+        account  : null,
+        accountId: null,
+        balance  : undefined,
+        txList   : [],
+        txDetails: {}
+      }
+    },
+    async mounted() {
+      setTimeout(() => this.preloader( this.refresh(true) ), 100)
+    },
