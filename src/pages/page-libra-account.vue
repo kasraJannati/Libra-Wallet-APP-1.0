@@ -141,3 +141,13 @@
           this.error(e);
         }
       },
+
+      showTx(tx) {
+        this.txDetails = tx;
+        this.$refs.actionTxDetails.open()
+      },
+      txExpTime(tx) {
+        return new Date(parseInt(tx.rawTxn.expirationTime) * 1000).toISOString();
+      },
+    },
+  };
