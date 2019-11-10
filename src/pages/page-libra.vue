@@ -43,3 +43,14 @@
 
   </f7-page>
 </template>
+
+<script>
+  import {
+    f7Page,
+    f7Fab,
+    f7Icon,
+    f7Block,
+    f7Navbar, f7NavLeft, f7NavRight, f7NavTitle,
+    f7Link,
+    f7List, f7ListGroup, f7ListItem, f7ListButton,
+  } from 'framework7-vue';
