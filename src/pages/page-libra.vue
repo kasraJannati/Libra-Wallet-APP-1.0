@@ -72,3 +72,8 @@
         accountList: []
       }
     },
+
+    async mounted() {
+      this.endpoint = libra.endpoint(false);
+      this.preloader( this.refresh(true) );
+    },
