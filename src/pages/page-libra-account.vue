@@ -129,3 +129,15 @@
           this.error(e);
         }
       },
+      async transfer () {
+        try {
+          const accountTo = '24';
+          const coins = await this.prompt('Transfer coins to acc. #' + accountTo, '', 10)
+          if (coins) {
+            await this.preloader( libra.transfer(this.accountId, accountTo, coins) )
+            await this.preloader( this.refresh(false) );
+          }
+        } catch (e) {
+          this.error(e);
+        }
+      },
