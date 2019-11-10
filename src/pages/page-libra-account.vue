@@ -29,3 +29,9 @@
         &nbsp;
       </span>
     </f7-block>
+
+    <f7-list no-hairlines class="text-align-center">
+      <f7-list-button @click="accountMint()">
+        MINT COINS ...
+      </f7-list-button>
+    </f7-list>
