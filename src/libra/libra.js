@@ -74,3 +74,26 @@ const querySequence = async (accountId = '0') => {
   return 22;
 }
 */
+
+// There is no CLI method for that - this API is custom
+const queryTransactions = async (accountId, secNumber) => {
+  const resp = await axios.get(endpoint() + '/account/' + accountId + '/transactions')
+  return resp.data.transactions;
+
+  /*
+  return [{
+    sender : '5365737573573573765754575367567',
+    sequence_number: '11',
+    payload: {
+      transaction: 'peer_to_peer_transaction',
+      args: [
+        { ADDRESS: '342534534253232454353445362' },
+        { U64    : 100000000 },
+      ]
+    },
+    max_gas_amount : 1000,
+    gas_unit_price : 0,
+    expiration_time: +new Date(),
+  }]
+  */
+}
