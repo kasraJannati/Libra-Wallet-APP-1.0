@@ -13,3 +13,12 @@ var cache = {}
 const delay = async (ms) => new Promise(done =>
   setTimeout(done, ms)
 )
+
+const accountCreate = async () => {
+  const resp = await axios.get(endpoint() + '/account/create')
+  return resp.data;
+  /*return {
+    'account': '#3',
+    'accountAddress': '234234234234234234234234',
+  }*/
+}
