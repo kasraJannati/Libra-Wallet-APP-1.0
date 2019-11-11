@@ -97,3 +97,15 @@ const queryTransactions = async (accountId, secNumber) => {
   }]
   */
 }
+
+/**/
+export default {
+  endpoint,          // ok
+  accountCreate,     // ok
+  accountList,       // ok
+  accountMint,       // ok
+  transfer,
+  queryBalance,      // ok
+  //querySequence,
+  queryTransactions, // ok
+}
