@@ -51,3 +51,26 @@ const accountMint = async (accountId, numCoins) => {
   return resp.data;
   //return {}
 }
+
+const transfer = async (accountFrom, accountTo, numCoins) => {
+  const resp = await axios.get(endpoint() + '/account/' + accountFrom + '/transfer?to=' + accountTo + '&amount=' + numCoins)
+  //const resp = await axios.get(endpoint() + '/transfer/accountFrom/accountTo/numCoins')
+  //return resp;
+  return resp.data.error ? Promise.reject('Error on CLI side') : resp.data;
+}
+
+//
+const queryBalance = async (accountId = '0') => {
+  const resp = await axios.get(endpoint() + '/account/' + accountId + '/balance')
+  return resp.data.balance;
+  //return 99;
+}
+
+/*
+const querySequence = async (accountId = '0') => {
+  //const resp = await axios.get(endpoint() + '/query/sequence?accountId=accountId')
+  //return resp.data['Sequence number is'];
+  //
+  return 22;
+}
+*/
